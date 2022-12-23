@@ -109,4 +109,9 @@ RateDate - Дата курса.
 14. Сборка сборной таблицы для расчета оставшихся параметров.
 15. Сборка ветрин: _corporate_payments_, _corporate_info_, _corporate_info_.
 16. Сохранениe каждой ветрины в паркет согласно ключу партиции CutoffDti.
-    
+
+### Результат
+Три папки:
+- _corporate_payments_
+- _corporate_account_
+- _corporate_info_    

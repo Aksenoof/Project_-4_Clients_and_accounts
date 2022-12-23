@@ -112,6 +112,6 @@ RateDate - Дата курса.
 
 ### Результат
 Три папки:
-- _corporate_payments_
-- _corporate_account_
-- _corporate_info_    
+- corporate_payments
+- corporate_account
+- corporate_info    

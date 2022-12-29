@@ -142,8 +142,8 @@ object main extends App{
   val _corporate_payments_ = prefTable.select("dfAi.AccountID", "dfCi.ClientId", "PaymentAmt", "EnrollementAmt", "TaxAmt", "ClearAmt", "CarsAmt", "FoodAmt", "FLAmt", "CutoffDt")
     .sort("dfCi.ClientId")
   // сохраняем в паркет
-//  _corporate_payments_.write.partitionBy("CutoffDt")
-//                      .parquet("/Users/i_aksenov/Project №4 Clients and accounts/_corporate_payments_2020-11-04.parquet")
+  _corporate_payments_.write.partitionBy("CutoffDt")
+                      .parquet("/Users/i_aksenov/Project №4 Clients and accounts/corporate_payments/_corporate_payments_2020-11-04.parquet")
 
   //сборка витрины corporate_account
   val _corporate_account_ = prefTable
@@ -151,8 +151,8 @@ object main extends App{
     .sort("dfCi.ClientId")
 
   // сохраняем в паркет
-//  _corporate_account_.write.partitionBy("CutoffDt")
-//                      .parquet("/Users/i_aksenov/Project №4 Clients and accounts/_corporate_account_2020-11-04.parquet")
+  _corporate_account_.write.partitionBy("CutoffDt")
+                      .parquet("/Users/i_aksenov/Project №4 Clients and accounts/corporate_account/_corporate_account_2020-11-04.parquet")
 
   //сборка витрины _corporate_info_
   val _corporate_info_ = prefTable.as("pT")
@@ -162,11 +162,11 @@ object main extends App{
     .sort("pT.ClientId")
 
   // сохраняем в паркет
-//  _corporate_info_.write.partitionBy("CutoffDt")
-//                      .parquet("/Users/i_aksenov/Project №4 Clients and accounts/_corporate_info_2020-11-04.parquet")
+  _corporate_info_.write.partitionBy("CutoffDt")
+                      .parquet("/Users/i_aksenov/Project №4 Clients and accounts/corporate_info/_corporate_info_2020-11-04.parquet")
 
   println(_corporate_payments_.show())
-//  println(_corporate_account_.show())
-//  println(_corporate_info_.show())
+  println(_corporate_account_.show())
+  println(_corporate_info_.show())
   spark.sparkContext.setLogLevel("WARN")
 }

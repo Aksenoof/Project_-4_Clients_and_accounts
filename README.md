@@ -14,13 +14,23 @@
 
 Для выполнения поставленной задачи проекта:
 
-Установлен Spakr локально.
+1. Установить [Spakr](https://spark.apache.org/downloads.html) локально.
 
-Развернут контейнер с Postgres в докере с помощью docker-compose.yml.
-С помощью Comment_filter.sql была создана и загружена в Postgres таблица списков.
+2. Установить [Docker](https://docs.docker.com/get-docker/) в зависимости от oперационной системы.
 
-В каталоге Clients and accounts размещен проект IntelliJ IDEA реализованый на scala.
-Cконфигурирован build.sbt для подключения к Spark  и Postgres.
+3. Развернут контейнер с Postgres
+ ```bash
+docker-compose up
+````
+Для администрирования Postgres
+ - установить [DBeaver](https://dbeaver.com/) 
+ 
+В DBeaver создаем и загружаем в постгрес из Comment_filter.sql таблицe списков.
+
+4. Открываем проект Clients and accounts в IntelliJ IDEA.
+
+Для правильной работы приложения в IntelliJ IDEA изменяем пути нахождения файлов данных по клиентам, счетам и операциям,
+а так же прописываем пути сохранения витрин на вашем хосте.
 
 После выполнения приложения получаем три каталога с сохраненными витринами согласно ключу партиции: 
  - corporate_payments,

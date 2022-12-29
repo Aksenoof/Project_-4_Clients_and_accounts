@@ -25,7 +25,7 @@ docker-compose up
 Для администрирования Postgres
  - установить [DBeaver](https://dbeaver.com/) 
  
-В DBeaver создаем и загружаем в постгрес из Comment_filter.sql таблицe списков.
+В DBeaver создаем и загружаем в постгрес из Comment_filter.sql таблицу списков.
 
 4. Открываем проект Clients and accounts в IntelliJ IDEA.
 

@@ -18,7 +18,7 @@
 
 2. Установить [Docker](https://docs.docker.com/get-docker/) в зависимости от oперационной системы.
 
-3. Развернут контейнер с Postgres
+3. Развернуть контейнер с Postgres
  ```bash
 docker-compose up
 ````
